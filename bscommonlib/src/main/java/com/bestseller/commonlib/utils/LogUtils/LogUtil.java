@@ -17,11 +17,15 @@ public class LogUtil {
      *
      * @param isLogEnable 是否打印log
      */
-    public static void init(final boolean isLogEnable) {
+    public static void init(String tag, final boolean isLogEnable) {
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
-                .tag("BS-common-lib log >>")   // (Optional) Global tag for every log. Default PRETTY_LOGGER
+                .showThreadInfo(false)  // (Optional) Whether to show thread info or not. Default true
+                .methodCount(2)         // (Optional) How many method line to show. Default 2
+                .methodOffset(5)        // (Optional) Hides internal method calls up to offset. Default 5
+//                .logStrategy(customLog) // (Optional) Changes the log strategy to print out. Default LogCat
+                .tag(tag)   // (Optional) Global tag for every log. Default PRETTY_LOGGER
                 .build();
-        Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy){
+        Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy) {
             @Override
             public boolean isLoggable(int priority, @Nullable String tag) {
                 return isLogEnable;
