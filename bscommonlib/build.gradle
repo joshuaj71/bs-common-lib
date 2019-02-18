@@ -34,16 +34,15 @@ dependencies {
 
     api 'com.facebook.stetho:stetho:1.5.0'
     api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
-//
     api 'com.google.code.gson:gson:2.8.5'
-//
-    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
     api "io.reactivex.rxjava2:rxjava:2.2.6"
 
-    api 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-
-    api 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha2'
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    api ('com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha2'){
+        exclude group: 'androidx.annotation'
+    }
 
     api 'com.trello.rxlifecycle3:rxlifecycle:3.0.0'
 }
