@@ -16,7 +16,7 @@ public class PermissionUtil {
     public static final int REQUEST_CODE_APP_INSTALL = 0x99;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public boolean hasInstallPermission(Context context){
+    public static boolean hasInstallPermission(Context context){
         if (context == null){
             return false;
         }
@@ -28,7 +28,7 @@ public class PermissionUtil {
      * @param activity
      */
     @RequiresApi (api = Build.VERSION_CODES.O)
-    public void startInstallPermissionSettingActivity(Activity activity) {
+    public static void startInstallPermissionSettingActivity(Activity activity) {
         if (activity == null){
             return;
         }
