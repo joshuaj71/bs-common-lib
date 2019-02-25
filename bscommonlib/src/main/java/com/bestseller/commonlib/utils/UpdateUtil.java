@@ -52,12 +52,5 @@ public class UpdateUtil {
 
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
-
-//        Uri fileUri  = FileProvider.getUriForFile(context,"com.bestseller.facepay.fileProvider", apk);
-//        Intent intent = new Intent(Intent.ACTION_VIEW);
-//        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);// 防止打不开应用
-//        intent.setDataAndType(fileUri, "application/vnd.android.package-archive");
-//        startActivity(intent);
     }
 }
