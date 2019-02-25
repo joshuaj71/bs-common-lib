@@ -48,6 +48,7 @@ public abstract class BSBaseActivity extends AppCompatActivity {
         initListener();
 
         initData();
+
     }
 
     private void hideStatusBar() {
