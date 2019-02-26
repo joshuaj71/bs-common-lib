@@ -20,7 +20,6 @@ import io.reactivex.plugins.RxJavaPlugins;
  * Description:
  */
 public class BSBaseApplication extends Application {
-    private static BSBaseApplication myApp;
     private Context context;
     private LinkedList<Activity> mActivities = new LinkedList<>();
 
@@ -32,7 +31,6 @@ public class BSBaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context = getApplicationContext();
-//        LitePalApplication.initialize(this);
         LitePal.initialize(getApplicationContext());
 
         Connector.getDatabase();
