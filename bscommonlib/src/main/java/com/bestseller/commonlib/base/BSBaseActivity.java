@@ -15,7 +15,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.orhanobut.logger.Logger;
-import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 public abstract class BSBaseActivity extends RxAppCompatActivity {
     protected Activity activity = this;
@@ -48,12 +48,6 @@ public abstract class BSBaseActivity extends RxAppCompatActivity {
         initListener();
 
         initData();
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
 
     }
 
