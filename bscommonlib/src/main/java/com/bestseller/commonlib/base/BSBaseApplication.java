@@ -20,7 +20,7 @@ import io.reactivex.plugins.RxJavaPlugins;
  * Description:
  */
 public class BSBaseApplication extends Application {
-    private Context context;
+    private static Context context;
     private LinkedList<Activity> mActivities = new LinkedList<>();
 
     static final String PURGE_ENABLED_KEY = "rx2.purge-enabled";
