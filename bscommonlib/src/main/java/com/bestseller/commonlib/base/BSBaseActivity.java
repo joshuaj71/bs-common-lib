@@ -34,14 +34,7 @@ public abstract class BSBaseActivity extends RxAppCompatActivity {
 
         context = this;
         mLoadingDialog = new BaseLoadingDialog(this);
-        builder = new AlertDialog.Builder(this)
-                .setCancelable(true)
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
+        builder = new AlertDialog.Builder(this).setTitle("提示");
 
         initView(savedInstanceState);
 
@@ -106,7 +99,39 @@ public abstract class BSBaseActivity extends RxAppCompatActivity {
         } else {
             builder.setMessage("未知消息");
         }
-        tipDialog = builder.create();
+        tipDialog = builder.setCancelable(true)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).create();
+        tipDialog.show();
+    }
+
+    public void showNonCancelableTip(String tip) {
+        if (!TextUtils.isEmpty(tip)) {
+            builder.setMessage(tip);
+        } else {
+            builder.setMessage("未知消息");
+        }
+        tipDialog = builder.setCancelable(false)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).create();
+        tipDialog.show();
+    }
+
+    public void showNonCancelableTip(String tip, DialogInterface.OnClickListener listener) {
+        if (!TextUtils.isEmpty(tip)) {
+            builder.setMessage(tip);
+        } else {
+            builder.setMessage("未知消息");
+        }
+        tipDialog = builder.setCancelable(false).setPositiveButton("确定", listener).create();
         tipDialog.show();
     }
 
