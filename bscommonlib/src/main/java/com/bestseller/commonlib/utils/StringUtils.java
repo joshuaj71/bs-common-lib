@@ -36,7 +36,7 @@ public class StringUtils {
     电信：133、153、180、189、（1349卫通）
     总结起来就是第一位必定为1，第二位必定为3或5或8，其他位置的可以为0-9
     */
-        String num = "^1(3|4|5|7|8|9)[0-9]\\d{8}$";
+        String num = "^1(3|4|5|6|7|8|9)[0-9]\\d{8}$";
         if (number.length() != 11) {
             return false;
         } else {
