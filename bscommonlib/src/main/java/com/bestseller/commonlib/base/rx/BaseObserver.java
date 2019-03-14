@@ -13,18 +13,15 @@ import io.reactivex.disposables.Disposable;
  */
 
 public abstract class BaseObserver<T> implements Observer<T> {
-    private Disposable disposable;
-
 
     @Override
     public void onSubscribe(@NonNull Disposable d) {
-        this.disposable = d;
     }
 
     @Override
     public void onNext(@NonNull T result) {
         if (result != null)
-            _onSuccess(result, disposable);
+            _onSuccess(result);
         else
             _onError(new Throwable("error = 服务器返回值为null"));
     }
@@ -54,7 +51,7 @@ public abstract class BaseObserver<T> implements Observer<T> {
 
     }
 
-    public abstract void _onSuccess(T t, Disposable disposable);
+    public abstract void _onSuccess(T t);
 
     public abstract void _onError(Throwable e);
 }

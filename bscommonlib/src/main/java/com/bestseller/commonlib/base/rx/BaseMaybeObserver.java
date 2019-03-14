@@ -6,12 +6,18 @@ import java.util.concurrent.CancellationException;
 
 import io.reactivex.MaybeObserver;
 import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
 
 /**
  * Created by _Nan7 on 2018/1/23.
  */
 
 public abstract class BaseMaybeObserver<T> implements MaybeObserver<T> {
+
+    @Override
+    public void onSubscribe(Disposable d) {
+
+    }
 
     @Override
     public void onSuccess(@NonNull T result) {

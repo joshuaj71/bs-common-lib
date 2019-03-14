@@ -6,12 +6,18 @@ import java.util.concurrent.CancellationException;
 
 import io.reactivex.SingleObserver;
 import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
 
 /**
  * Created by Joshua
  */
 //public abstract class BaseSingleObserver<T> implements SingleObserver<T> {
 public abstract class BaseSingleObserver<T> implements SingleObserver<T> {
+
+    @Override
+    public void onSubscribe(Disposable d) {
+
+    }
 
     @Override
     public void onSuccess(@NonNull T result) {
