@@ -8,7 +8,7 @@ import io.reactivex.disposables.Disposable;
  * Date:2019/3/25
  * Description:
  */
-public abstract class RxBusObservable implements Observer {
+public abstract class RxBusObservable<T> implements Observer<T> {
     @Override
     public void onSubscribe(Disposable d) {
 
