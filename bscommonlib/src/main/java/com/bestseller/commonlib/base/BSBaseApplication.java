@@ -21,7 +21,7 @@ import io.reactivex.plugins.RxJavaPlugins;
  */
 public class BSBaseApplication extends Application {
     private static Context context;
-    private LinkedList<Activity> mActivities = new LinkedList<>();
+    public LinkedList<Activity> mActivities = new LinkedList<>();
 
     static final String PURGE_ENABLED_KEY = "rx2.purge-enabled";
     static final String PURGE_PERIOD_SECONDS_KEY = "rx2.purge-period-seconds";
