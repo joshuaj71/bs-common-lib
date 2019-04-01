@@ -20,15 +20,8 @@ import com.bestseller.commonlib.R;
 
 
 public class BaseLoadingDialog extends Dialog {
-    private static int default_width = 380; // 默认宽度
-    private static int default_height = 340;// 默认高度
     private ProgressBar loadingBar;
-
     public BaseLoadingDialog(Context context) {
-        this(context, default_width, default_height);
-    }
-
-    public BaseLoadingDialog(Context context, int width, int height) {
         super(context, R.style.Theme_bs_base_loading_dialog);
         setContentView(R.layout.bs_base_dialog_loading);
         setCancelable(true);
