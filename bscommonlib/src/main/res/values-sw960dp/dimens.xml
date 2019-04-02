@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size_dialog_loading_loading_now">57sp</dimen>
+    <dimen name="text_size_dialog_loading_loading_now">47sp</dimen>
 
-    <dimen name="width_loading_progress_bar">277dp</dimen>
+    <dimen name="width_loading_progress_bar">257dp</dimen>
 </resources>
