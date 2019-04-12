@@ -2,5 +2,5 @@
 <resources>
     <dimen name="text_size_dialog_loading_loading_now">47sp</dimen>
 
-    <dimen name="width_loading_progress_bar">107dp</dimen>
+    <dimen name="width_loading_progress_bar">177dp</dimen>
 </resources>
