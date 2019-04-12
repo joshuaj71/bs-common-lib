@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.bestseller.commonlib.R;
 
@@ -21,20 +22,27 @@ import com.bestseller.commonlib.R;
 
 public class BaseLoadingDialog extends Dialog {
     private ProgressBar loadingBar;
-    private String tip = "";
+    private TextView progressMsg000;
+    private String defaultTip = "加载中...";
 
 
-    public void setTip(String content){
-        this.tip = content;
+    public void setTip(String tip) {
+        if (progressMsg000 != null) {
+            progressMsg000.setText(tip);
+        }
     }
 
-    public void setDefaultTip(){
-        this.tip = "加载中...";
+    public void setDefaultTip() {
+        if (progressMsg000 != null) {
+            progressMsg000.setText(defaultTip);
+        }
     }
 
     public BaseLoadingDialog(Context context) {
         super(context, R.style.Theme_bs_base_loading_dialog);
         setContentView(R.layout.bs_base_dialog_loading);
+        progressMsg000 = findViewById(R.id.progressMsg000);
+        loadingBar = findViewById(R.id.bsBaseProgressBar000);
         setCancelable(true);
         Window window = getWindow();
         if (window != null) {
@@ -48,7 +56,6 @@ public class BaseLoadingDialog extends Dialog {
             params.gravity = Gravity.CENTER;
             window.setBackgroundDrawable(new ColorDrawable(context.getResources().getColor(R.color.color_base_loading_dialog_bg)));
             window.setAttributes(params);
-            loadingBar = findViewById(R.id.bsBaseProgressBar000);
             loadingBar.getIndeterminateDrawable().setColorFilter(context.getResources().getColor
                     (R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
         }
