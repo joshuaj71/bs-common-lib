@@ -2,7 +2,7 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center_horizontal">
     <!--android:background="@drawable/dialog_bg_progressbar"-->
 
 
@@ -11,7 +11,7 @@
         style="@android:style/Widget.Material.Light.ProgressBar.Large"
         android:layout_width="@dimen/width_loading_progress_bar"
         android:layout_height="@dimen/width_loading_progress_bar"
-        android:layout_marginTop="777dp"
+        android:layout_marginTop="700dp"
         />
 
     <TextView

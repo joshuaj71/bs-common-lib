@@ -10,7 +10,6 @@ import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bestseller.commonlib.R;
@@ -54,14 +53,12 @@ public class BaseLoadingDialog extends Dialog {
 //            params.height = (int) (height * density);
             params.width = WindowManager.LayoutParams.MATCH_PARENT;
             params.height = WindowManager.LayoutParams.MATCH_PARENT;
-            params.gravity = Gravity.CENTER;
+            params.gravity = Gravity.CENTER_HORIZONTAL;
             window.setBackgroundDrawable(new ColorDrawable(context.getResources().getColor(R.color.color_base_loading_dialog_bg)));
             window.setAttributes(params);
             loadingBar.getIndeterminateDrawable().setColorFilter(context.getResources().getColor
                     (R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
         }
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) loadingBar.getLayoutParams();
-        lp.setMargins(0, 700, 0, 0);
     }
 
     /**
