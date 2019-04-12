@@ -6,8 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 39
-        versionName "1.1.39"
+        versionCode 40
+        versionName "1.1.40"
 
         consumerProguardFiles 'proguard-rules.pro'
     }
@@ -52,7 +52,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
 //    api 'com.afollestad.material-dialogs:core:2.0.3'
-    api 'me.relex:circleindicator:1.2.2'
     api 'de.hdodenhof:circleimageview:3.0.0'
     api 'me.jessyan:autosize:1.1.2'
 }

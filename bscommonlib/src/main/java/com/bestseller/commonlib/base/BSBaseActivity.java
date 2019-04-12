@@ -36,7 +36,6 @@ public abstract class BSBaseActivity extends RxAppCompatActivity {
         initListener();
 
         initData();
-
     }
 
 
