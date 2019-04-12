@@ -11,6 +11,7 @@
         style="@android:style/Widget.Material.Light.ProgressBar.Large"
         android:layout_width="@dimen/width_loading_progress_bar"
         android:layout_height="@dimen/width_loading_progress_bar"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="700dp"
         />
 
