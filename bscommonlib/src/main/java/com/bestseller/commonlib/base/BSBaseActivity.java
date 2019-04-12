@@ -57,9 +57,17 @@ public abstract class BSBaseActivity extends RxAppCompatActivity {
             this.mLoadingDialog = new BaseLoadingDialog(this);
         }
         if (isValidContext(this)) {
+            ((BaseLoadingDialog) this.mLoadingDialog).setDefaultTip();
             this.mLoadingDialog.show();
         }
         return mLoadingDialog;
+    }
+
+    public Dialog showLoadingDialog(String tip) {
+        this.mLoadingDialog = new BaseLoadingDialog(this);
+        ((BaseLoadingDialog) this.mLoadingDialog).setTip(tip);
+        this.mLoadingDialog.show();
+        return this.mLoadingDialog;
     }
 
     public void setNewBaseLoadingDialog(Dialog newBaseLoadingDialog) {

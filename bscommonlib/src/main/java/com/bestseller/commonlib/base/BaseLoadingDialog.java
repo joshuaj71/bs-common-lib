@@ -21,6 +21,17 @@ import com.bestseller.commonlib.R;
 
 public class BaseLoadingDialog extends Dialog {
     private ProgressBar loadingBar;
+    private String tip = "";
+
+
+    public void setTip(String content){
+        this.tip = content;
+    }
+
+    public void setDefaultTip(){
+        this.tip = "加载中...";
+    }
+
     public BaseLoadingDialog(Context context) {
         super(context, R.style.Theme_bs_base_loading_dialog);
         setContentView(R.layout.bs_base_dialog_loading);
