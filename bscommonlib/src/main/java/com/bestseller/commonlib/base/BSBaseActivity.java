@@ -18,7 +18,7 @@ public abstract class BSBaseActivity extends RxAppCompatActivity {
     protected AppCompatActivity activity = this;
     protected Context context;
 
-    private Dialog mLoadingDialog;
+    protected Dialog mLoadingDialog;
 
     private AlertDialog.Builder builder;
     private AlertDialog tipDialog;
@@ -56,18 +56,11 @@ public abstract class BSBaseActivity extends RxAppCompatActivity {
             this.mLoadingDialog = new BaseLoadingDialog(this);
         }
         if (isValidContext(this)) {
-            ((BaseLoadingDialog) this.mLoadingDialog).setDefaultTip();
             this.mLoadingDialog.show();
         }
         return mLoadingDialog;
     }
 
-    public Dialog showLoadingDialog(String tip) {
-        this.mLoadingDialog = new BaseLoadingDialog(this);
-        ((BaseLoadingDialog) this.mLoadingDialog).setTip(tip);
-        this.mLoadingDialog.show();
-        return this.mLoadingDialog;
-    }
 
     public void setNewBaseLoadingDialog(Dialog newBaseLoadingDialog) {
         this.mLoadingDialog = newBaseLoadingDialog;

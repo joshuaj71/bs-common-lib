@@ -6,8 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 51
-        versionName "1.1.51"
+        versionCode 52
+        versionName "1.1.52"
 
         consumerProguardFiles 'proguard-rules.pro'
     }
@@ -51,7 +51,6 @@ dependencies {
     api 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
-//    api 'com.afollestad.material-dialogs:core:2.0.3'
     api 'de.hdodenhof:circleimageview:3.0.0'
     api 'me.jessyan:autosize:1.1.2'
 }
