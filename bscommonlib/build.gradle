@@ -6,8 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 57
-        versionName "1.1.57"
+        versionCode 58
+        versionName "1.1.58"
 
         consumerProguardFiles 'proguard-rules.pro'
     }
@@ -53,4 +53,5 @@ dependencies {
 
     api 'de.hdodenhof:circleimageview:3.0.0'
     api 'me.jessyan:autosize:1.1.2'
+    api 'com.kaopiz:kprogresshud:1.2.0'
 }
