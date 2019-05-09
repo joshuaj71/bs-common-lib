@@ -51,14 +51,13 @@ public abstract class BSBaseActivity extends RxAppCompatActivity {
         }
     }
 
-    public Dialog showLoadingDialog() {
+    public void showLoadingDialog() {
         if ((!isFinishing()) && (this.mLoadingDialog == null)) {
             this.mLoadingDialog = new BaseLoadingDialog(this);
         }
         if (isValidContext(this)) {
             this.mLoadingDialog.show();
         }
-        return mLoadingDialog;
     }
 
 
