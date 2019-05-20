@@ -6,8 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 58
-        versionName "1.1.58"
+        versionCode 59
+        versionName "1.1.59"
 
         consumerProguardFiles 'proguard-rules.pro'
     }
@@ -48,8 +48,8 @@ dependencies {
     api "io.reactivex.rxjava2:rxjava:2.2.6"
 
     api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
-    api 'com.github.bumptech.glide:glide:4.9.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+//    api 'com.github.bumptech.glide:glide:4.9.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
     api 'de.hdodenhof:circleimageview:3.0.0'
     api 'me.jessyan:autosize:1.1.2'
