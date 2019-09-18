@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 
-import com.bestseller.commonlib.utils.LogUtils.LogUtil;
+import com.bestseller.commonlib.utils.logutils.LogUtil;
 
 import org.litepal.LitePal;
 import org.litepal.tablemanager.Connector;

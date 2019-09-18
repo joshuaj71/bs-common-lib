@@ -8,7 +8,6 @@ android {
         targetSdkVersion 28
         versionCode 59
         versionName "1.1.59"
-
         consumerProguardFiles 'proguard-rules.pro'
     }
 

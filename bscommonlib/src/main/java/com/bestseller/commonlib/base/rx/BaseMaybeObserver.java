@@ -1,6 +1,6 @@
 package com.bestseller.commonlib.base.rx;
 
-import com.bestseller.commonlib.utils.LogUtils.LogUtil;
+import com.bestseller.commonlib.utils.logutils.LogUtil;
 
 import java.util.concurrent.CancellationException;
 

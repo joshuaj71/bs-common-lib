@@ -1,4 +1,4 @@
-package com.bestseller.commonlib.utils.LogUtils;
+package com.bestseller.commonlib.utils.logutils;
 
 import android.support.annotation.Nullable;
 
