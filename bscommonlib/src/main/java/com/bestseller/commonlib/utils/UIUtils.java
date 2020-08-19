@@ -1,19 +1,10 @@
-package com.bestseller.shoppingguide.utils;
+package com.bestseller.commonlib.utils;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.support.design.widget.TabLayout;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-
-import com.orhanobut.logger.Logger;
-
-import java.lang.reflect.Field;
-
 
 /**
  * Created by joshua on 2017/4/17.
